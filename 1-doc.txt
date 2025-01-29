@@ -1,0 +1,9 @@
+# https://platzi.com/home/clases/1767-nodejs-microservicios/25319-rutas-para-usuarios/
+npm init
+
+npm i express
+
+npm install -g nodemon
+
+
+--  nodemon api/index.js
