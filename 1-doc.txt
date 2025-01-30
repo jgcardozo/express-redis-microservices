@@ -7,3 +7,5 @@ npm install -g nodemon
 
 
 --  nodemon api/index.js
+
+HU6 - npm i uuid

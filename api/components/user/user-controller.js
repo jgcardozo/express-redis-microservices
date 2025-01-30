@@ -1,11 +1,15 @@
-const store = require('../../../store/dbContext');
+const { v4: uuidv4 } = require('uuid');
 
 const TABLA = 'user';
 
-const list = () => {
-    return store.list(TABLA);
-}
+module.exports = (injectedStore) => {
 
-module.exports = {
-    list,
+    if (!injectedStore) injectedStore = require('../../../store/dbContext');
+
+    return {
+        list: () => injectedStore.list(TABLA),
+        get: id => injectedStore.get(TABLA, id),
+        //insert: (body) =>
+    }
+
 }
